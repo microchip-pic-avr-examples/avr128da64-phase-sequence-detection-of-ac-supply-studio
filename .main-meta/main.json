@@ -3,28 +3,28 @@
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
-        "name": "com.microchip.mcu8.studio.project.",
-        "version": " ",
-        "displayName": "  ",
-        "projectName": "",
-        "shortDescription": "",
+        "name": "com.microchip.mcu8.studio.project.avr128da64-phase-sequence-detection-of-ac-supply-studio",
+        "version": "1.0.1",
+        "displayName": "Phase Sequence Detection of AC Supply using AVR128DA64 in Atmel Studio IDE",
+        "projectName": "avr128da64-phase-sequence-detection-of-ac-supply-studio",
+        "shortDescription": "This application note describes the implementation of a phase sequence and phase loss detection system for a three-phase AC supply and demonstrates the detection of phase sequence and phase loss faults on emulated three phase AC systems supply using the AVR128DA64 microcontroller in Atmel Studio IDE",
         "ide": {
-            "name": "",
-            "semverRange": ""
+            "name": "Studio",
+            "semverRange": ">=7.0.2397"
         },
         "compiler": [
 			{
-				"name": "",
-				"semverRange": ""
+				"name": "Avr-Gcc",
+				"semverRange": "^5.4.0"
 			}
 		],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "AVR-Dx_DFP",
+            "semverRange": "^1.2.56"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "START",
+            "semverRange": ">=1.7.391"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -32,7 +32,7 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "",
+                "name": "AVR128DA64",
                 "versionRange": "*"
             }
         },
@@ -40,18 +40,43 @@
         "subcategories": [
             "",
             [
-               "Peripherals", ""
+               "Peripherals", "TCA"
             ],
             [
-               "Peripherals", ""
-            ]            			
+               "Peripherals", "SPI"
+            ],
+            [
+               "Peripherals", "USART"
+            ],
+            [
+               "Peripherals", "ZCD"
+            ],
+            [
+               "Peripherals", "ADC"
+            ],
+            [
+               "Peripherals", "VREF"
+            ]              			
         ],
         "peripherals": [
-            "",""
+            "TCA","SPI","USART","ZCD","ADC","VREF"
         ],
-        "keywords": [
-            "",
-            ""			
+        "keywords": [	
+            "AVR128DA64",
+            "AVR DA",
+			"START",
+			"Atmel Studio",
+			"Studio",
+			"Phase Sequence Detection",
+			"Three-Phase AC Supply",
+			"Phase Loss",
+			"Phase Reversal",
+			"Phase Detection",
+			"Zero Phase",
+			"RMS Voltage",
+			"Root mean square",
+			"Data Visualizer",
+			"Three-Phase Sequence Detection"			
         ],
 		"additionalData": {
 			"longDescription": {

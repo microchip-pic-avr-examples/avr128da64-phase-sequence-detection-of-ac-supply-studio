@@ -1,0 +1,588 @@
+format_version: '2'
+name: My Project
+versions:
+  api: '1.0'
+  backend: 1.7.391
+  commit: d4b7e9f65a05ebffcb0986e4060cb8c0a313e69a
+  content: unknown
+  content_pack_name: unknown
+  format: '2'
+  frontend: 1.7.391
+  packs_version_avr8: 1.0.1421
+  packs_version_qtouch: unknown
+  packs_version_sam: 1.0.1658
+  version_backend: 1.7.391
+  version_frontend: ''
+board:
+  identifier: CustomBoard
+  device: AVR128DA64
+details: null
+application: null
+middlewares: {}
+drivers:
+  CLKCTRL:
+    user_label: CLKCTRL
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::CLKCTRL::driver_config_definition::CLKCTRL::Drivers:CLKCTRL:Init
+    functionality: System
+    api: Drivers:CLKCTRL:Init
+    configuration:
+      clkctrl_mclkctrla_cksel: Internal high-frequency oscillator
+      clkctrl_mclkctrla_clkout: false
+      clkctrl_mclkctrlb_pdiv: '2'
+      clkctrl_mclkctrlb_pen: false
+      clkctrl_mclklock_locken: false
+      clkctrl_oschfctrla_autotune: false
+      clkctrl_oschfctrla_freqsel: '24'
+      clkctrl_oschfctrla_runstdby: false
+      clkctrl_oschftune_tune: 0
+      clkctrl_pllctrla_mulfac: '1'
+      clkctrl_pllctrla_runstdby: false
+      clkctrl_pllctrla_source: Internal high-frequency oscillator
+      clkctrl_xosc32kctrla_csut: 1k cycles
+      clkctrl_xosc32kctrla_lpmode: false
+      clkctrl_xosc32kctrla_runstdby: false
+      clkctrl_xosc32kctrla_sel: false
+      cpu_clock_source: Main Clock (CLK_MAIN)
+      enable_clk_per: true
+      enable_externalclock: false
+      enable_intHigh: true
+      enable_main: true
+      enable_osc32K: true
+      enable_pll: false
+      enable_tcd0: true
+      enable_xosc3212kctrla: false
+      extclk_clksel_clksel: External clock
+      externalclock: 8000000
+      nvm_clock_source: Main Clock (CLK_MAIN)
+      osc32k_clksel_clksel: Internal 32.768 kHz oscillator
+      osculp1k_clksel_clksel: Internal high-frequency oscillator
+      ram_clock_source: Main Clock (CLK_MAIN)
+      tcd0_ctrla_clksel: Internal high-frequency oscillator
+      tcd0_ctrla_syncpres: '1'
+      xosc32kctrla_arch_enable: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: CPU
+          input: CPU
+          external: false
+          external_frequency: 0
+        configuration: {}
+  USART_0:
+    user_label: USART_0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::USART1::driver_config_definition::Async.Polled.Mode::Drivers:USART:Basic
+    functionality: USART
+    api: Drivers:USART:Basic
+    configuration:
+      baud_rate: 230400
+      ctrla_abeie: false
+      ctrla_dreie: false
+      ctrla_lbme: false
+      ctrla_rs485: RS485 Mode disabled
+      ctrla_rxcie: true
+      ctrla_rxsie: false
+      ctrla_txcie: false
+      ctrlb_mpcm: false
+      ctrlb_odme: false
+      ctrlb_rxen: true
+      ctrlb_rxmode: Normal mode
+      ctrlb_sfden: false
+      ctrlb_txen: true
+      ctrlc_chsize: 'Character size: 8 bit'
+      ctrlc_cmode: Asynchronous USART
+      ctrlc_pmode: No Parity
+      ctrlc_sbmode: 1 stop bit
+      ctrlc_ucpha: false
+      ctrlc_udord: false
+      dbgctrl_abmbp: false
+      dbgctrl_dbgrun: false
+      evctrl_irei: false
+      printf_support: false
+      rxplctrl_rxpl: 0
+      txplctrl_txpl: 0
+    optional_signals: []
+    variant:
+      specification: CMODE=0
+      required_signals:
+      - name: USART1/RXD
+        pad: PC1
+        label: RXD
+      - name: USART1/TXD
+        pad: PC0
+        label: TXD
+    clocks:
+      domain_group:
+        nodes:
+        - name: USART
+          input: Main Clock (CLK_MAIN)
+          external: false
+          external_frequency: 0
+        configuration:
+          usart_clock_source: Main Clock (CLK_MAIN)
+  SLPCTRL:
+    user_label: SLPCTRL
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::SLPCTRL::driver_config_definition::SLPCTRL::Drivers:SLPCTRL:Init
+    functionality: System
+    api: Drivers:SLPCTRL:Init
+    configuration:
+      slpctrl_ctrla_sen: false
+      slpctrl_ctrla_smode: Idle mode
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  CPUINT:
+    user_label: CPUINT
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::CPUINT::driver_config_definition::CPUINT::Drivers:CPUINT:Init
+    functionality: System
+    api: Drivers:CPUINT:Init
+    configuration:
+      cpuint_ctrla_cvt: false
+      cpuint_ctrla_ivsel: false
+      cpuint_ctrla_lvl0rr: true
+      cpuint_global_interrupt: true
+      cpuint_lvl0pri_lvl0pri: 1
+      cpuint_lvl1vec_lvl1vec: 32
+      inc_isr_harness: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  ZCD_0:
+    user_label: ZCD_0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::ZCD0::driver_config_definition::ZCD::Drivers:ZCD:Init
+    functionality: ZCD
+    api: Drivers:ZCD:Init
+    configuration:
+      enable_standby: false
+      enable_zcdout: false
+      inc_isr_harness: false
+      inv_out_polarity: false
+      zcd_ctrla_enable: true
+      zcd_intmode: Interrupt on rising input signal
+    optional_signals:
+    - identifier: ZCD_0:IN
+      pad: PD1
+      mode: Enabled
+      configuration: null
+      definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::optional_signal_definition::ZCD0.IN
+      name: ZCD0/IN
+      label: IN
+    variant: null
+    clocks:
+      domain_group: null
+  ZCD_1:
+    user_label: ZCD_1
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::ZCD1::driver_config_definition::ZCD::Drivers:ZCD:Init
+    functionality: ZCD
+    api: Drivers:ZCD:Init
+    configuration:
+      enable_standby: false
+      enable_zcdout: false
+      inc_isr_harness: false
+      inv_out_polarity: false
+      zcd_ctrla_enable: true
+      zcd_intmode: Interrupt on rising input signal
+    optional_signals:
+    - identifier: ZCD_1:IN
+      pad: PE3
+      mode: Enabled
+      configuration: null
+      definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::optional_signal_definition::ZCD1.IN
+      name: ZCD1/IN
+      label: IN
+    variant: null
+    clocks:
+      domain_group: null
+  ZCD_2:
+    user_label: ZCD_2
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::ZCD2::driver_config_definition::ZCD::Drivers:ZCD:Init
+    functionality: ZCD
+    api: Drivers:ZCD:Init
+    configuration:
+      enable_standby: false
+      enable_zcdout: false
+      inc_isr_harness: false
+      inv_out_polarity: false
+      zcd_ctrla_enable: true
+      zcd_intmode: Interrupt on rising input signal
+    optional_signals:
+    - identifier: ZCD_2:IN
+      pad: PE7
+      mode: Enabled
+      configuration: null
+      definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::optional_signal_definition::ZCD2.IN
+      name: ZCD2/IN
+      label: IN
+    variant: null
+    clocks:
+      domain_group: null
+  SPI_0:
+    user_label: SPI_0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::SPI0::driver_config_definition::SPI.Master.Interrupt::Drivers:SPI:Basic
+    functionality: SPI
+    api: Drivers:SPI:Basic
+    configuration:
+      spi_ctrla_clk2x: false
+      spi_ctrla_dord: false
+      spi_ctrla_enable: true
+      spi_ctrla_master: true
+      spi_ctrla_presc: System Clock / 4
+      spi_ctrlb_bufen: false
+      spi_ctrlb_bufwr: false
+      spi_ctrlb_mode: SPI Mode 2
+      spi_ctrlb_ssd: false
+      spi_intctrl_dreie: false
+      spi_intctrl_ie: false
+      spi_intctrl_rxcie: false
+      spi_intctrl_ssie: false
+      spi_intctrl_txcie: false
+      spi_open_close: false
+    optional_signals: []
+    variant:
+      specification: MASTER=1
+      required_signals:
+      - name: SPI0/MISO
+        pad: PA5
+        label: MISO
+      - name: SPI0/MOSI
+        pad: PA4
+        label: MOSI
+      - name: SPI0/SCK
+        pad: PA6
+        label: SCK
+    clocks:
+      domain_group:
+        nodes:
+        - name: SPI
+          input: Main Clock (CLK_MAIN)
+          external: false
+          external_frequency: 0
+        configuration:
+          spi_clock_source: Main Clock (CLK_MAIN)
+  ADC_0:
+    user_label: ADC_0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::ADC0::driver_config_definition::ADC.Basic::Drivers:ADC:Basic
+    functionality: ADC
+    api: Drivers:ADC:Basic
+    configuration:
+      adc_ctrla_convmode: Differential Mode Conversion
+      adc_ctrla_enable: true
+      adc_ctrla_freerun: false
+      adc_ctrla_leftadj: false
+      adc_ctrla_ressel: 12-bit mode
+      adc_ctrla_runstby: false
+      adc_ctrlb_sampnum: No accumulation
+      adc_ctrlc_presc: CLK_PER divided by 12
+      adc_ctrld_initdly: Delay 0 CLK_ADC cycles
+      adc_ctrld_sampdly: 0
+      adc_ctrle_wincm: No Window Comparison
+      adc_dbgctrl_dbgrun: false
+      adc_differential_mode: true
+      adc_evctrl_startei: false
+      adc_intctrl_resrdy: false
+      adc_intctrl_wcmp: false
+      adc_muxneg_muxneg: Ground
+      adc_muxpos_muxpos: ADC input pin 4
+      adc_sampctrl_samplen: 0
+      adc_sampling_config: false
+      adc_winht: 0
+      adc_winlt: 0
+    optional_signals:
+    - identifier: ADC_0:AIN/4
+      pad: PD4
+      mode: Enabled
+      configuration: null
+      definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::optional_signal_definition::ADC0.AIN.4
+      name: ADC0/AIN/4
+      label: AIN/4
+    - identifier: ADC_0:AIN/5
+      pad: PD5
+      mode: Enabled
+      configuration: null
+      definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::optional_signal_definition::ADC0.AIN.5
+      name: ADC0/AIN/5
+      label: AIN/5
+    - identifier: ADC_0:AIN/6
+      pad: PD6
+      mode: Enabled
+      configuration: null
+      definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::optional_signal_definition::ADC0.AIN.6
+      name: ADC0/AIN/6
+      label: AIN/6
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: ADC
+          input: Main Clock (CLK_MAIN)
+          external: false
+          external_frequency: 0
+        configuration:
+          adc_clock_source: Main Clock (CLK_MAIN)
+  TIMER_0:
+    user_label: TIMER_0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::TCA0::driver_config_definition::Normal.Mode::Drivers:TCA:Init
+    functionality: Timer
+    api: Drivers:TCA:Init
+    configuration:
+      inc_isr_harness: false
+      tca_cmp0: 0
+      tca_cmp1: 0
+      tca_cmp2: 0
+      tca_cnt: 1
+      tca_ctrla_clksel: System Clock / 8
+      tca_ctrla_enable: true
+      tca_ctrla_runstdby: false
+      tca_ctrlb_alupd: false
+      tca_ctrlb_cmp0en: false
+      tca_ctrlb_cmp1en: false
+      tca_ctrlb_cmp2en: false
+      tca_ctrlb_wgmode: Normal Mode
+      tca_ctrlc_cmp0ov: false
+      tca_ctrlc_cmp1ov: false
+      tca_ctrlc_cmp2ov: false
+      tca_dbgctrl_dbgrun: false
+      tca_evctrl_cntaei: false
+      tca_evctrl_cntbei: false
+      tca_evctrl_evacta: Count on positive edge event
+      tca_evctrl_evactb: Count on prescaled clock. Event controls count direction.
+        Up-count when event line is 0, down-count when event line is 1.
+      tca_intctrl_cmp0: false
+      tca_intctrl_cmp1: false
+      tca_intctrl_cmp2: false
+      tca_intctrl_ovf: true
+      tca_per: 65534
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: TCA
+          input: Main Clock (CLK_MAIN)
+          external: false
+          external_frequency: 0
+        configuration:
+          tca_clock_source: Main Clock (CLK_MAIN)
+  TIMER_1:
+    user_label: TIMER_1
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::TCA1::driver_config_definition::Normal.Mode::Drivers:TCA:Init
+    functionality: Timer
+    api: Drivers:TCA:Init
+    configuration:
+      inc_isr_harness: false
+      tca_cmp0: 0
+      tca_cmp1: 0
+      tca_cmp2: 0
+      tca_cnt: 1
+      tca_ctrla_clksel: System Clock / 8
+      tca_ctrla_enable: true
+      tca_ctrla_runstdby: false
+      tca_ctrlb_alupd: false
+      tca_ctrlb_cmp0en: false
+      tca_ctrlb_cmp1en: false
+      tca_ctrlb_cmp2en: false
+      tca_ctrlb_wgmode: Normal Mode
+      tca_ctrlc_cmp0ov: false
+      tca_ctrlc_cmp1ov: false
+      tca_ctrlc_cmp2ov: false
+      tca_dbgctrl_dbgrun: false
+      tca_evctrl_cntaei: false
+      tca_evctrl_cntbei: false
+      tca_evctrl_evacta: Count on positive edge event
+      tca_evctrl_evactb: Count on prescaled clock. Event controls count direction.
+        Up-count when event line is 0, down-count when event line is 1.
+      tca_intctrl_cmp0: false
+      tca_intctrl_cmp1: false
+      tca_intctrl_cmp2: false
+      tca_intctrl_ovf: true
+      tca_per: 1516
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group:
+        nodes:
+        - name: TCA
+          input: Main Clock (CLK_MAIN)
+          external: false
+          external_frequency: 0
+        configuration:
+          tca_clock_source: Main Clock (CLK_MAIN)
+  VREF_0:
+    user_label: VREF_0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::VREF::driver_config_definition::VREF::Drivers:VREF:Init
+    functionality: VREF
+    api: Drivers:VREF:Init
+    configuration:
+      vref_acref_alwayson: false
+      vref_acref_refsel: Internal 1.024V reference
+      vref_adcref_alwayson: true
+      vref_adcref_refsel: VDD as reference
+      vref_dacref_alwayson: false
+      vref_dacref_refsel: Internal 1.024V reference
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+  BOD:
+    user_label: BOD
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::BOD::driver_config_definition::BOD::Drivers:BOD:Init
+    functionality: System
+    api: Drivers:BOD:Init
+    configuration:
+      bod_ctrla_sleep: Disabled
+      bod_intctrl_vlmcfg: Interrupt when supply goes below VLM level
+      bod_intctrl_vlmie: false
+      bod_vlmctrla_vlmlvl: VLM threshold 5% above BOD level
+      inc_isr_harness: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
+pads:
+  PA4:
+    name: PA4
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PA4
+    mode: Digital output
+    user_label: PA4
+    configuration: null
+  PA5:
+    name: PA5
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PA5
+    mode: Digital input
+    user_label: PA5
+    configuration: null
+  PA6:
+    name: PA6
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PA6
+    mode: Digital output
+    user_label: PA6
+    configuration: null
+  AD5227_CS1:
+    name: PA7
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PA7
+    mode: Digital output
+    user_label: AD5227_CS1
+    configuration:
+      pad_initial_level: High
+  AD5227_CS3:
+    name: PB4
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PB4
+    mode: Digital output
+    user_label: AD5227_CS3
+    configuration:
+      pad_initial_level: High
+  WC_OE2:
+    name: PB5
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PB5
+    mode: Digital output
+    user_label: WC_OE2
+    configuration:
+      pad_initial_level: High
+  PC0:
+    name: PC0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PC0
+    mode: Digital output
+    user_label: PC0
+    configuration: null
+  PC1:
+    name: PC1
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PC1
+    mode: Digital input
+    user_label: PC1
+    configuration: null
+  SW:
+    name: PC7
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PC7
+    mode: Digital input
+    user_label: SW
+    configuration:
+      pad_pull_config: Pull-up
+  WC_OE1:
+    name: PD0
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD0
+    mode: Digital output
+    user_label: WC_OE1
+    configuration:
+      pad_initial_level: High
+  PD1:
+    name: PD1
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD1
+    mode: Analog
+    user_label: PD1
+    configuration: null
+  WC_OE3:
+    name: PD2
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD2
+    mode: Digital output
+    user_label: WC_OE3
+    configuration:
+      pad_initial_level: High
+  PD4:
+    name: PD4
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD4
+    mode: Analog
+    user_label: PD4
+    configuration: null
+  PD5:
+    name: PD5
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD5
+    mode: Analog
+    user_label: PD5
+    configuration: null
+  PD6:
+    name: PD6
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD6
+    mode: Analog
+    user_label: PD6
+    configuration: null
+  AD9833_FSN1:
+    name: PD7
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PD7
+    mode: Digital output
+    user_label: AD9833_FSN1
+    configuration:
+      pad_initial_level: High
+  AD9833_FSN3:
+    name: PE1
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PE1
+    mode: Digital output
+    user_label: AD9833_FSN3
+    configuration:
+      pad_initial_level: High
+  AD5227_CS2:
+    name: PE2
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PE2
+    mode: Digital output
+    user_label: AD5227_CS2
+    configuration:
+      pad_initial_level: High
+  PE3:
+    name: PE3
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PE3
+    mode: Analog
+    user_label: PE3
+    configuration: null
+  PE7:
+    name: PE7
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PE7
+    mode: Analog
+    user_label: PE7
+    configuration: null
+  AD9833_FSN2:
+    name: PF3
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::pad::PF3
+    mode: Digital output
+    user_label: AD9833_FSN2
+    configuration:
+      pad_initial_level: High
+toolchain_options:
+- definition:
+    identifier: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::environment_definition::All:Atmel.Studio:7.0.0
+  configuration:
+    compiler_config:
+      avrgcc_compiler_miscellaneous_OtherFlags: -std=gnu99
+    linker_config:
+      avrgcc_linker_miscellaneous_LinkerFlags: ''
