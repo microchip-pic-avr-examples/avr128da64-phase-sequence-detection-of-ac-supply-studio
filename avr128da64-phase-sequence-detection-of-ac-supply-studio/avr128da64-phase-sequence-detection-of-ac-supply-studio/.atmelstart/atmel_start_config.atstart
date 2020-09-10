@@ -2,16 +2,16 @@ format_version: '2'
 name: My Project
 versions:
   api: '1.0'
-  backend: 1.7.391
-  commit: d4b7e9f65a05ebffcb0986e4060cb8c0a313e69a
+  backend: 1.7.430
+  commit: f09e2a2493613fab9dafdd76d38e1ed2f0a13a39
   content: unknown
   content_pack_name: unknown
   format: '2'
-  frontend: 1.7.391
-  packs_version_avr8: 1.0.1421
+  frontend: 1.7.430
+  packs_version_avr8: 1.0.1429
   packs_version_qtouch: unknown
   packs_version_sam: 1.0.1658
-  version_backend: 1.7.391
+  version_backend: 1.7.430
   version_frontend: ''
 board:
   identifier: CustomBoard
@@ -72,7 +72,7 @@ drivers:
         configuration: {}
   USART_0:
     user_label: USART_0
-    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::USART1::driver_config_definition::Async.Polled.Mode::Drivers:USART:Basic
+    definition: Atmel:AVRDA_64_drivers:1.0.0::AVR128DA64::USART1::driver_config_definition::Async.IRQ.Mode::Drivers:USART:Basic
     functionality: USART
     api: Drivers:USART:Basic
     configuration:
@@ -80,7 +80,6 @@ drivers:
       ctrla_abeie: false
       ctrla_dreie: false
       ctrla_lbme: false
-      ctrla_rs485: RS485 Mode disabled
       ctrla_rxcie: true
       ctrla_rxsie: false
       ctrla_txcie: false
@@ -98,10 +97,13 @@ drivers:
       ctrlc_udord: false
       dbgctrl_abmbp: false
       dbgctrl_dbgrun: false
+      driver_rx_buffer_size: '8'
+      driver_tx_buffer_size: '8'
       evctrl_irei: false
-      printf_support: false
+      printf_support: true
       rxplctrl_rxpl: 0
       txplctrl_txpl: 0
+      usart_ctrla_rs485: RS485 Mode disabled
     optional_signals: []
     variant:
       specification: CMODE=0

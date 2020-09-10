@@ -9,33 +9,34 @@ The AVR® DA family of microcontrollers are peripheral rich, high performance an
 The application demonstrator showcases the phase sequence detection and phase loss detection on emulated three phase AC supply using AVR128DA64 microcontroller.
 
 ## Relevant Application Note  
-Phase Sequence Detection of Three-Phase AC Supply demonstration and implementation is discussed in the <a href="https://microchip.com/DS00003607" rel="nofollow">Phase Sequence Detection of Three-Phase AC Supply Application Note.
+Phase Sequence Detection of Three-Phase AC Supply demonstration and implementation is discussed in the <a href="https://microchip.com/DS00003607" rel="nofollow">Phase Sequence Detection of Three-Phase AC Supply Application Note</a>.
 
 ## Application Firmware
 
 The demonstration is implemented with both AVR128DA64 and AVR128DA48 microcontrollers and it is available on microchip GitHub page-
 
-* Using <a href="https://github.com/microchip-pic-avr-examples/avr128da64-phase-sequence-detection-of-ac-supply-studio" rel="nofollow">AVR128DA64
-* Using <a href="https://github.com/microchip-pic-avr-examples/avr128da48-phase-sequence-detection-of-ac-supply-studio" rel="nofollow">AVR128DA48 
-
+* <a href="https://github.com/microchip-pic-avr-examples/avr128da48-phase-sequence-detection-of-ac-supply-mplab" rel="nofollow">AVR128DA48 Phase Sequence Detection application code example using mplab</a>
+* <a href="https://github.com/microchip-pic-avr-examples/avr128da48-phase-sequence-detection-of-ac-supply-studio" rel="nofollow">AVR128DA48 Phase Sequence Detection application code example using Atmel studio</a>
+* <a href="https://github.com/microchip-pic-avr-examples/avr128da64-phase-sequence-detection-of-ac-supply-mplab" rel="nofollow">AVR128DA64 Phase Sequence Detection application code example using mplab</a>
 ## Software Tools Used 
 
 Microchip’s IDEs, compiler and graphical code generators are used throughout the application firmware development to provide an easy and hassle-free user experience. 
 Following are the tools which are used for this demo application:
-* <a href="https://www.microchip.com/mplab/avr-support/atmel-studio-7" rel="nofollow">Atmel Studio (v7.0.2397)
-* <a href="https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers" rel="nofollow">AVR-GCC compiler (v5.4.0)
-* <a href="https://www.microchip.com/mplab/avr-support/atmel-start" rel="nofollow">Atmel Start (v1.7.360)
-* <a href="https://www.microchip.com/mplab/avr-support/data-visualizer" rel="nofollow">Standalone Data Visualizer (v2.20.674)
+* <a href="https://www.microchip.com/mplab/avr-support/atmel-studio-7" rel="nofollow">Atmel Studio (v7.0.2397)</a>
+* <a href="https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers" rel="nofollow">AVR-GCC compiler (v5.4.0)</a>
+* <a href="https://www.microchip.com/mplab/avr-support/atmel-start" rel="nofollow">Atmel Start(v1.7.430)</a>
+* <a href="https://packs.download.microchip.com" rel="nofollow">DFP Pack (v1.3.67)</a>
+* <a href="https://www.microchip.com/mplab/avr-support/data-visualizer" rel="nofollow">Standalone Data Visualizer (v2.20.674)</a>
 
 ## Hardware Used
 
-* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164151" rel="nofollow">AVR128DA48 Curiosity Nano board
-* <a href="https://www.microchip.com/developmenttools/ProductDetails/AC164162" rel="nofollow">Curiosity Nano base for click boards
-* <a href="https://www.mikroe.com/waveform-click" rel="nofollow">Three waveform clicks 
+* <a href="https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164151" rel="nofollow">AVR128DA48 Curiosity Nano board</a>
+* <a href="https://www.microchip.com/developmenttools/ProductDetails/AC164162" rel="nofollow">Curiosity Nano base for click boards</a>
+* <a href="https://www.mikroe.com/waveform-click" rel="nofollow">Three waveform clicks</a> 
 * SMA male cable
 * Berg connectors 
-* <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/STK600-AVR-Flash-MCU-Starter-Kit-Users-Guide-DS40001904D.pdf" rel="nofollow">STK600
-* Socket card <a href="https://www.microchip.com/Developmenttools/ProductDetails/ATSTK600-SC14" rel="nofollow">(STK600 TQFP64-2)
+* <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/STK600-AVR-Flash-MCU-Starter-Kit-Users-Guide-DS40001904D.pdf" rel="nofollow">STK600</a>
+* Socket card <a href="https://www.microchip.com/Developmenttools/ProductDetails/ATSTK600-SC14" rel="nofollow">(STK600 TQFP64-2)</a>
 * Routing card (STK600-RC064AVR-108)
 * USB cables 
   - Micro B USB cables
@@ -80,7 +81,7 @@ Here is the list of Data Visualizer modules used for Demonstration –
   * Radio Group
 * Data Streamer (Data Streamer file is given for the demonstration)  
 
-Refer Data Visualizer User Guide for more information about <a href="http://ww1.microchip.com/downloads/Secure/en/DeviceDoc/40001903B.pdf" rel="nofollow">Data Visualizer. 
+Refer Data Visualizer User Guide for more information about <a href="http://ww1.microchip.com/downloads/Secure/en/DeviceDoc/40001903B.pdf" rel="nofollow">Data Visualizer</a>. 
 
 The demo uses an emulated three-phase AC supply to showcase the essential features of the application. To emulate the AC power supply three waveform clicks are used in the application.
 
@@ -123,7 +124,7 @@ Figure 2 shows the Data Visualizer custom dashboard and input,output elements.
 12.	Insert phase loss fault by clicking the L3 radio button on dashboard, which disables the L3 signal out of three-phase signal to emulate phase loss input.
 13.	Insert phase reversal by clicking the PR radio button on dashboard, which changes the sequence of the three-phase signal to L1-L3-L2.
 
- **NOTE:** For more details on application demonstration setup refer Phase Sequence Detection of Three-Phase AC Supply <a href="http://www.microchip.com" rel="nofollow">Application Note section 7. 
+ **NOTE:** For more details on application demonstration setup refer Phase Sequence Detection of Three-Phase AC Supply <a href="http://www.microchip.com" rel="nofollow">Application Note section 7</a>. 
 
 Figure 2 shows the Data Visualizer Dashboard for Phase Sequence Detection of Three-phase AC Supply. 
 
