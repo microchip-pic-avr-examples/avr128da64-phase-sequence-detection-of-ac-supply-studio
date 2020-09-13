@@ -25,7 +25,7 @@ Following are the tools which are used for this demo application:
 * <a href="https://www.microchip.com/mplab/avr-support/atmel-studio-7" rel="nofollow">Atmel Studio (v7.0.2397)</a>
 * <a href="https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers" rel="nofollow">AVR-GCC compiler (v5.4.0)</a>
 * <a href="https://www.microchip.com/mplab/avr-support/atmel-start" rel="nofollow">Atmel Start(v1.7.430)</a>
-* <a href="https://packs.download.microchip.com" rel="nofollow">DFP Pack (v1.3.67)</a>
+* <a href="https://packs.download.atmel.com" rel="nofollow">DFP Pack (v1.4.73)</a>
 * <a href="https://www.microchip.com/mplab/avr-support/data-visualizer" rel="nofollow">Standalone Data Visualizer (v2.20.674)</a>
 
 ## Hardware Used
