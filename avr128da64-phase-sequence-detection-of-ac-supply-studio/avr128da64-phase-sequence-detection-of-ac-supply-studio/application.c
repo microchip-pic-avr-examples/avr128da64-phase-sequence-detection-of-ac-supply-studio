@@ -6,6 +6,7 @@
  */ 
 #include <stdio.h>
 #include <string.h>
+#include "clock_config.h"
 #include <util/delay.h>
 #include "adc_basic.h"
 #include "application.h"

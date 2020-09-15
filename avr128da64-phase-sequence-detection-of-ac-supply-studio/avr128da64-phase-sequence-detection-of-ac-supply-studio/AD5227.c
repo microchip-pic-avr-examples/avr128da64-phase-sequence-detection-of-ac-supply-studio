@@ -6,6 +6,7 @@
  */ 
 
 #include "AD5227.h"
+#include "clock_config.h"
 #include <util/delay.h>
 #include "driver_init.h"
 #include "Communication.h"
