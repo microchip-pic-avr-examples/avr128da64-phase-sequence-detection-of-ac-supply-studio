@@ -14,7 +14,7 @@
         },
         "compiler": [
 			{
-				"name": "Avr-Gcc",
+				"name": "AVR-GCC",
 				"semverRange": "^5.4.0"
 			}
 		],
@@ -24,7 +24,7 @@
         },
         "configurator": {
             "name": "START",
-            "semverRange": ">=1.7.430"
+            "semverRange": ">=1.8.444"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -62,7 +62,7 @@
             "TCA","SPI","USART","ZCD","ADC","VREF"
         ],
         "keywords": [	
-            "Avr128da64",
+            "AVR128DA64",
             "AVR DA",
 			"START",
 			"Atmel Studio",
