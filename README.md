@@ -64,8 +64,8 @@ Connects AVR device to the STK600 using an innovative routing (STK600-RC064AVR-1
 * Press SW0 button on STK600 board for selecting appropriate frequency (50Hz/60Hz) for the emulated three-phase AC signal.  
 
 <p align="center">
-  <img width=750 height=auto src="images/DemoSetup.png">
-  <br><strong>Figure 1: Demonstration Hardware Setup<br>
+  <img width=750 height=auto src="images/DemoSetup.png"></a>
+  <br>Figure 1: Demonstration Hardware Setup<br>
 </p>
 
 ## Data Visualizer Configuration
@@ -129,7 +129,7 @@ Figure 2 shows the Data Visualizer custom dashboard and input,output elements.
 Figure 2 shows the Data Visualizer Dashboard for Phase Sequence Detection of Three-phase AC Supply. 
 
 <p align="center">
-  <img width=750 height=auto src="images/DashBoard.png">
-  <br><strong>Figure 2: Data Visualizer Dashboard<br>
+  <img width=750 height=auto src="images/DashBoard.png"></a>
+  <br>Figure 2: Data Visualizer Dashboard<br>
 </p>
 
